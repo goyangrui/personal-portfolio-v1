@@ -150,3 +150,43 @@ h6 {
 .fs-secondary-body {
   font-size: var(--fs-secondary-body);
 }
+
+/* General styles */
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--ff-body);
+  color: var(--white);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Section styles */
+
+.primary-header {
+  background-image: url("../images/polygon-scatter-haikei.svg");
+}
+
+.about {
+  background-image: url("../images/layered-waves-haikei.svg");
+}
+
+.projects {
+  background-image: url("../images/layered-waves-haikei-reverse.svg");
+}
+
+.contact {
+  background-image: url("../images/wave-haikei.svg");
+}
+
+.primary-footer {
+  background-color: var(--primary-color-1);
+}
