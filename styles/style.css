@@ -4,7 +4,149 @@
   --primary-color-2: #584cdd;
   --primary-color-3: #6634ca;
   --primary-color-4: #710ab6;
+  --white: #fff;
+  --black: #000;
 
   --gray-1: #20293b;
   --gray-2: #99a0a6;
+
+  --ff-primary: "AnkaCoderRegular", sans-serif;
+  --ff-heading: var(--ff-primary);
+  --ff-body: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.3125rem;
+  --fs-700: 1.75rem;
+  --fs-800: 3rem;
+  --fs-900: 4rem;
+
+  --fs-primary-heading: var(--fs-900);
+  --fs-secondary-heading: var(--fs-800);
+  --fs-tertiary-heading: var(--fs-700);
+  --fs-nav: var(--fs-600);
+  --fs-primary-body: var(--fs-600);
+  --fs-secondary-body: var(--fs-500);
+}
+
+/* CSS Reset */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Utilities */
+
+.text-primary-1 {
+  color: var(--primary-color-1);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-gray-2 {
+  color: var(--gray-2);
+}
+
+.ff-heading {
+  font-family: var(--ff-heading);
+}
+
+.ff-body {
+  font-family: var(--ff-heading);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+}
+
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+}
+
+.fs-tertiary-heading {
+  font-size: var(--fs-tertiary-heading);
+}
+
+.fs-nav {
+  font-size: var(--fs-nav);
+}
+
+.fs-primary-body {
+  font-size: var(--fs-primary-body);
+}
+
+.fs-secondary-body {
+  font-size: var(--fs-secondary-body);
 }
