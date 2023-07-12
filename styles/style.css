@@ -17,12 +17,12 @@
   --fw-regular: 400;
   --fw-bold: 700;
 
-  --fs-400: 1rem;
-  --fs-500: 1.125rem;
-  --fs-600: 1.3125rem;
-  --fs-700: 1.75rem;
-  --fs-800: 3rem;
-  --fs-900: 4rem;
+  --fs-400: 1rem; /* 16px */
+  --fs-500: 1.125rem; /* 18px */
+  --fs-600: 1.3125rem; /* 21px */
+  --fs-700: 1.75rem; /* 28px */
+  --fs-800: 3rem; /* 48px */
+  --fs-900: 4rem; /* 64px */
 
   --fs-primary-heading: var(--fs-900);
   --fs-secondary-heading: var(--fs-800);
@@ -116,7 +116,7 @@ h6 {
 }
 
 .ff-body {
-  font-family: var(--ff-heading);
+  font-family: var(--ff-body);
 }
 
 .fw-regular {
