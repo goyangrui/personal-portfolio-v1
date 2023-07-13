@@ -10,7 +10,6 @@
       href="https://fontlibrary.org//face/anka-coder"
       type="text/css"
     />
-    <link href="styles/reset.css" rel="stylesheet" />
     <link href="styles/style.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/d30bea498b.js"
@@ -41,7 +40,7 @@
     <main>
       <!-- Title page -->
       <section class="section hero background-image">
-        <div class="container">
+        <div class="container-xl">
           <div class="d-flex flex-direction-column justify-content-center">
             <h1 class="primary-heading fw-bold fs-primary-heading">
               Hi, I'm <span class="text-primary-1">George Oyang</span>
@@ -60,7 +59,7 @@
       </section>
 
       <!-- About page -->
-      <section class="section about background-image">
+      <section class="section about background-image-bottom">
         <div class="container">
           <h2 class="secondary-heading fw-bold fs-secondary-heading">
             About Me
@@ -70,7 +69,7 @@
               <h3 class="tertiary-heading fw-bold fs-tertiary-heading">
                 Who am I?
               </h3>
-              <p class="text-gray-2">
+              <p class="fs-secondary-body text-gray-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
                 hendrerit lacus a porttitor cursus. Integer sit amet dui
                 molestie, pharetra ex posuere, sollicitudin nibh. Nulla
@@ -109,17 +108,19 @@
               />
               <div class="project-image"></div>
               <div class="project-description">
-                <h3 class="tertiary-heading fw-bold fs-tertiary-heading">
+                <h3
+                  class="tertiary-heading fw-bold fs-tertiary-heading mr-lg-1"
+                >
                   Trading Journal
                 </h3>
-                <p class="text-gray-2 project-details">
+                <p class="fs-secondary-body text-gray-2 project-details">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Maecenas rhoncus nibh sit amet vulputate gravida. Praesent ut
                   vehicula quam. Sed eget vestibulum lacus. Suspendisse
                   facilisis mauris eget turpis gravida vestibulum.
                 </p>
                 <div class="project-skills"></div>
-                <div class="project-links">
+                <div class="project-links mr-lg-1">
                   <i class="fa-brands fa-github"></i>
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </div>
@@ -131,11 +132,11 @@
 
       <!-- Contact page -->
       <section class="section contact background-image">
-        <div class="container">
+        <div class="container-xl">
           <h2 class="secondary-heading fw-bold fs-secondary-heading">
             Get In Touch
           </h2>
-          <p>
+          <p class="primary-paragraph fw-regular fs-primary-body">
             Feel free to contact me through email. I am open to any full-stack
             development job opportunities, as well as collaborations on any
             interesting projects!
@@ -150,7 +151,9 @@
     </main>
 
     <footer class="primary-footer">
-      &copy; Designed and Built By George Oyang
+      <p class="copyright-text fs-secondary-body">
+        &copy; Designed and Built By George Oyang
+      </p>
     </footer>
   </body>
 </html>
