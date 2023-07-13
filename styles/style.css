@@ -1,5 +1,6 @@
 :root {
   --background-color: #001220;
+  --background-color-light: #1a2a36;
   --primary-color-1: #4361ed;
   --primary-color-2: #584cdd;
   --primary-color-3: #6634ca;
@@ -17,10 +18,12 @@
   --fw-regular: 400;
   --fw-bold: 700;
 
+  --fs-300: 0.8rem;
   --fs-400: 1rem; /* 16px */
   --fs-500: 1.125rem; /* 18px */
   --fs-600: 1.3125rem; /* 21px */
   --fs-700: 1.75rem; /* 28px */
+  --fs-750: 2rem; /* 32px */
   --fs-800: 3rem; /* 48px */
   --fs-900: 4rem; /* 64px */
 
@@ -28,8 +31,11 @@
   --fs-secondary-heading: var(--fs-800);
   --fs-tertiary-heading: var(--fs-700);
   --fs-nav: var(--fs-600);
-  --fs-primary-body: var(--fs-600);
-  --fs-secondary-body: var(--fs-500);
+  --fs-primary-body: var(--fs-500);
+  --fs-secondary-body: var(--fs-400);
+
+  --border-radius-1: 1rem;
+  --border-radius-2: 2rem;
 }
 
 /* CSS Reset */
@@ -151,17 +157,161 @@ h6 {
   font-size: var(--fs-secondary-body);
 }
 
-/* General styles */
-
-body {
-  background-color: var(--background-color);
-  font-family: var(--ff-body);
-  color: var(--white);
+.d-flex {
+  display: flex;
+  height: 100%;
 }
 
-ul {
-  padding: 0;
-  list-style: none;
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.primary-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.primary-paragraph {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.secondary-heading {
+  text-align: center;
+  position: relative;
+  margin-bottom: 75px;
+}
+
+.secondary-heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.75rem;
+  background: white;
+  height: 0.5rem;
+  width: 5rem;
+  border-radius: 1rem;
+  margin-left: -2.5rem;
+}
+
+.tertiary-heading {
+  margin-bottom: 25px;
+}
+
+.section {
+  height: 100vh;
+  padding-top: 10rem;
+}
+
+.container {
+  --max-width: 1700px;
+  --padding: 10rem;
+
+  height: 100%;
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin: 0 auto;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: var(--fs-750);
+}
+
+.even-columns {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 800px) {
+  .even-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-list-item {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.project-image-laptop {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 8;
+}
+
+.project-image {
+  display: none;
+  border-radius: var(--border-radius-1);
+  background-image: url("../images/trading-journal-project.png");
+  background-color: var(--background-color-light);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 6;
+  grid-column-end: -1;
+}
+
+.project-details {
+  text-align: right;
+  background-color: var(--gray-1);
+  padding: 2rem;
+  border-radius: var(--border-radius-2);
+}
+
+@media (max-width: 1080px) {
+  .project-image-laptop {
+    grid-column-end: 10;
+  }
+
+  .project-description {
+    grid-column-start: 5;
+  }
+}
+
+@media (max-width: 800px) {
+  .project-image-laptop {
+    display: none;
+  }
+
+  .project-image {
+    display: block;
+  }
+
+  .project-description {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    padding: 1.3rem;
+    align-items: flex-start;
+  }
+
+  .project-details {
+    text-align: left;
+    background-color: transparent;
+    padding: 0;
+  }
 }
 
 .background-image {
@@ -169,9 +319,23 @@ ul {
   background-size: cover;
 }
 
+/* General styles */
+
+body {
+  font-size: var(--fs-secondary-body);
+  font-family: var(--ff-body);
+  color: var(--white);
+  background-color: var(--background-color);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 /* Section styles */
 
-.primary-header {
+.hero {
   background-image: url("../images/polygon-scatter-haikei.svg");
 }
 
