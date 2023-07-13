@@ -143,9 +143,17 @@ h6 {
   margin-right: 0px;
 }
 
+.ml-lg-1 {
+  margin-left: 0px;
+}
+
 @media (min-width: 993px) {
   .mr-lg-1 {
     margin-right: 20px;
+  }
+
+  .ml-lg-1 {
+    margin-left: 20px;
   }
 }
 
@@ -482,19 +490,28 @@ h6 {
   gap: 1rem;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 10rem;
+}
+
+.project-image-laptop-left,
+.project-image-laptop-right {
+  grid-row-start: 1;
+  grid-row-end: 1;
 }
 
 .project-image-laptop-left {
-  grid-row-start: 1;
-  grid-row-end: 1;
   grid-column-start: 1;
   grid-column-end: 8;
 }
 
-.project-image-left {
+.project-image-laptop-right {
+  grid-column-start: -1;
+  grid-column-end: -8;
+}
+
+.project-image {
   display: none;
   border-radius: var(--border-radius-1);
-  background-image: url("../images/trading-journal-project.png");
   background-color: var(--background-color-light);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
@@ -503,6 +520,14 @@ h6 {
   grid-row-end: 1;
   grid-column-start: 1;
   grid-column-end: 13;
+}
+
+.project-image-trading-journal {
+  background-image: url("../images/trading-journal-project.png");
+}
+
+.project-image-personal-portfolio-v1 {
+  background-image: url("../images/personal-portfolio-v1-project.png");
 }
 
 .project-description-right {
@@ -518,6 +543,25 @@ h6 {
 
 .project-details-right {
   text-align: right;
+  background-color: var(--gray-1);
+  padding: 1.25rem;
+  border-radius: var(--border-radius-2);
+  margin-bottom: 1rem;
+}
+
+.project-description-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 8;
+}
+
+.project-details-left {
+  text-align: left;
   background-color: var(--gray-1);
   padding: 1.25rem;
   border-radius: var(--border-radius-2);
@@ -544,22 +588,28 @@ h6 {
     max-width: 80%;
   }
 
+  .project-list-item {
+    margin-bottom: 5rem;
+  }
+
   .project-image-laptop-left {
     display: none;
   }
 
-  .project-image-left {
+  .project-image {
     display: block;
   }
 
-  .project-description-right {
+  .project-description-right,
+  .project-description-left {
     grid-column-start: 1;
     grid-column-end: 13;
     padding: 1.3rem;
     align-items: flex-start;
   }
 
-  .project-details-right {
+  .project-details-right,
+  .project-details-left {
     text-align: left;
     background-color: transparent;
     padding: 0;
@@ -581,9 +631,17 @@ h6 {
 }
 
 @media (max-width: 576px) {
+  .project-list-item {
+    margin-bottom: 3rem;
+  }
+
   .project-links {
     font-size: var(--fs-500);
   }
+}
+
+.project-list-item:last-child {
+  margin-bottom: 0;
 }
 
 body {
