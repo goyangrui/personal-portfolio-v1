@@ -52,6 +52,7 @@
 
   --border-radius-1: 1rem;
   --border-radius-2: 2rem;
+  --border-radius-3: 1.25rem;
 }
 
 /* CSS Reset */
@@ -447,6 +448,18 @@ h6 {
   .even-columns {
     grid-template-columns: 1fr;
   }
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill {
+  background-color: var(--gray-1);
+  padding: 8px 16px;
+  border-radius: var(--border-radius-3);
 }
 
 .projects-list {
