@@ -372,11 +372,11 @@ h6 {
 .secondary-heading {
   text-align: center;
   position: relative;
-  margin-bottom: 75px;
+  margin-bottom: 100px;
 }
 
 .contact .secondary-heading {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .secondary-heading::after {
@@ -396,6 +396,10 @@ h6 {
 }
 
 @media (max-width: 992px) {
+  .secondary-heading {
+    margin-bottom: 75px;
+  }
+
   .secondary-heading::after {
     height: 0.4rem;
   }
@@ -406,6 +410,12 @@ h6 {
     height: 0.3rem;
     width: 3rem;
     margin-left: -1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .secondary-heading {
+    margin-bottom: 50px;
   }
 }
 
