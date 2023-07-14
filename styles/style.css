@@ -542,6 +542,18 @@ a:hover {
   background-color: var(--gray-1);
   padding: 8px 16px;
   border-radius: var(--border-radius-3);
+  font-size: var(--fs-500);
+}
+
+@media (max-width: 576px) {
+  .skills-container {
+    gap: 0.7rem;
+  }
+
+  .skill {
+    font-size: var(--fs-300);
+    padding: 6px 14px;
+  }
 }
 
 .projects-list {
