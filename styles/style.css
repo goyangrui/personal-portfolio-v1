@@ -286,7 +286,10 @@ h6 {
 
 .hero {
   height: 100vh;
-  background-image: url("../images/polygon-scatter-haikei.svg");
+  background-image: url("../images/macbook-background.jpg");
+  background-position: center;
+  background-color: var(--background-color-light);
+  background-blend-mode: multiply;
 }
 
 .about {
