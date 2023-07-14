@@ -26,23 +26,37 @@
             src="./images/personal-logo-v3.png"
             alt="personal portfolio logo"
         /></a>
-        <button class="drop-down-button">
-          <i class="fa-solid fa-bars"></i>
-        </button>
         <ul class="nav-list">
-          <li><a href="#about-section">01. About</a></li>
-          <li><a href="#projects-section">02. Projects</a></li>
-          <li><a href="#contact-section">03. Contact</a></li>
+          <li><a href="#about-section" class="nav-link">01. About</a></li>
+          <li><a href="#projects-section" class="nav-link">02. Projects</a></li>
+          <li><a href="#contact-section" class="nav-link">03. Contact</a></li>
           <li>
             <a
               class="button"
-              href="./files/Main Resume - George Oyang.pdf"
-              download="Main Resume - George Oyang.pdf"
+              href="/files/Main Resume - George Oyang.pdf"
+              target="_blank"
               >Resume</a
             >
           </li>
         </ul>
+
+        <button class="dropdown-button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </nav>
+      <ul class="dropdown-menu">
+        <li><a href="#about-section" class="nav-link">01. About</a></li>
+        <li><a href="#projects-section" class="nav-link">02. Projects</a></li>
+        <li><a href="#contact-section" class="nav-link">03. Contact</a></li>
+        <li>
+          <a
+            class="button"
+            href="/files/Main Resume - George Oyang.pdf"
+            target="_blank"
+            >Resume</a
+          >
+        </li>
+      </ul>
     </header>
 
     <main>
@@ -58,10 +72,13 @@
               useful applications for the web
             </p>
             <div class="icon-container">
-              <a href="https://www.linkedin.com/in/george-oyang/">
+              <a
+                href="https://www.linkedin.com/in/george-oyang/"
+                target="_blank"
+              >
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
-              <a href="https://github.com/goyangrui">
+              <a href="https://github.com/goyangrui" target="_blank">
                 <i class="fa-brands fa-github"></i>
               </a>
               <a href="mailto: oyanggeorge@gmail.com">
@@ -150,10 +167,16 @@
                 </p>
                 <div class="project-skills"></div>
                 <div class="project-links mr-lg-1">
-                  <a href="https://github.com/goyangrui/trading-journal">
+                  <a
+                    href="https://github.com/goyangrui/trading-journal"
+                    target="_blank"
+                  >
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a href="https://trading-journal-service.onrender.com/">
+                  <a
+                    href="https://trading-journal-service.onrender.com/"
+                    target="_blank"
+                  >
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
@@ -183,7 +206,7 @@
                 </p>
                 <div class="project-skills"></div>
                 <div class="project-links ml-lg-1">
-                  <a href="#">
+                  <a href="#" target="_blank">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   </a>
                 </div>
@@ -205,10 +228,10 @@
             interesting projects!
           </p>
           <div class="icon-container">
-            <a href="https://www.linkedin.com/in/george-oyang/">
+            <a href="https://www.linkedin.com/in/george-oyang/" target="_blank">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/goyangrui">
+            <a href="https://github.com/goyangrui" target="_blank">
               <i class="fa-brands fa-github"></i>
             </a>
             <a href="mailto: oyanggeorge@gmail.com">
@@ -224,5 +247,56 @@
         &copy; Designed and Built By George Oyang
       </p>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleBtn = document.querySelector(".dropdown-button");
+        const toggleBtnIcon = document.querySelector(".dropdown-button i");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+        const headerEl = document.querySelector(".primary-header");
+
+        // Event listener for toggle button
+        toggleBtn.addEventListener("click", () => {
+          dropdownMenu.classList.toggle("open");
+          const isOpen = dropdownMenu.classList.contains("open");
+
+          toggleBtnIcon.classList = isOpen
+            ? "fa-solid fa-x"
+            : "fa-solid fa-bars";
+        });
+
+        // Event listener for document (to detect if user clicks inside or outside header element)
+        document.addEventListener("click", (e) => {
+          let targetEl = e.target;
+          do {
+            if (targetEl == headerEl) {
+              return;
+            }
+            targetEl = targetEl.parentNode;
+          } while (targetEl);
+
+          dropdownMenu.classList.remove("open");
+
+          const isOpen = dropdownMenu.classList.contains("open");
+
+          toggleBtnIcon.classList = isOpen
+            ? "fa-solid fa-x"
+            : "fa-solid fa-bars";
+        });
+
+        // Event listener for buttons within dropdown menu
+        for (const childNode of dropdownMenu.children) {
+          const childLink = childNode.firstElementChild;
+          childLink.addEventListener("click", () => {
+            dropdownMenu.classList.remove("open");
+
+            const isOpen = dropdownMenu.classList.contains("open");
+
+            toggleBtnIcon.classList = isOpen
+              ? "fa-solid fa-x"
+              : "fa-solid fa-bars";
+          });
+        }
+      });
+    </script>
   </body>
 </html>
