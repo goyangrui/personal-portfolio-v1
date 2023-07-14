@@ -281,7 +281,7 @@ h6 {
 /* General Styles */
 
 .section {
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 
 .hero {
@@ -444,6 +444,11 @@ h6 {
   font-size: var(--fs-750);
 }
 
+.icon-container a {
+  color: var(--white);
+  text-decoration: none;
+}
+
 @media (max-width: 992px) {
   .icon-container {
     font-size: var(--fs-700);
@@ -570,6 +575,11 @@ h6 {
 
 .project-links {
   font-size: var(--fs-700);
+}
+
+.project-links a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 @media (max-width: 1080px) {

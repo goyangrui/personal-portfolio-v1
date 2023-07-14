@@ -21,7 +21,7 @@
     <!-- Navigation bar -->
     <header class="primary-header">
       <nav class="primary-navigation">
-        <a href="#" class="logo"
+        <a href="#hero-section" class="logo"
           ><img
             src="./images/personal-logo-v3.png"
             alt="personal portfolio logo"
@@ -30,9 +30,9 @@
           <i class="fa-solid fa-bars"></i>
         </button>
         <ul class="nav-list">
-          <li><a href="#">01. About</a></li>
-          <li><a href="#">02. Projects</a></li>
-          <li><a href="#">03. Contact</a></li>
+          <li><a href="#about-section">01. About</a></li>
+          <li><a href="#projects-section">02. Projects</a></li>
+          <li><a href="#contact-section">03. Contact</a></li>
           <button class="button">Resume</button>
         </ul>
       </nav>
@@ -40,7 +40,7 @@
 
     <main>
       <!-- Title page -->
-      <section class="section hero background-image">
+      <section id="hero-section" class="section hero background-image">
         <div class="container-xl">
           <div class="d-flex flex-direction-column justify-content-center">
             <h1 class="primary-heading fw-bold fs-primary-heading">
@@ -51,16 +51,22 @@
               useful applications for the web
             </p>
             <div class="icon-container">
-              <i class="fa-brands fa-linkedin-in"></i>
-              <i class="fa-brands fa-github"></i>
-              <i class="fa-solid fa-envelope"></i>
+              <a href="https://www.linkedin.com/in/george-oyang/">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/goyangrui">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="mailto: oyanggeorge@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- About page -->
-      <section class="section about background-image-bottom">
+      <section id="about-section" class="section about background-image-bottom">
         <div class="container">
           <h2 class="secondary-heading fw-bold fs-secondary-heading">
             About Me
@@ -110,7 +116,7 @@
       </section>
 
       <!-- Projects page -->
-      <section class="section projects background-image">
+      <section id="projects-section" class="section projects background-image">
         <div class="container">
           <h2 class="secondary-heading fw-bold fs-secondary-heading">
             Projects
@@ -137,8 +143,12 @@
                 </p>
                 <div class="project-skills"></div>
                 <div class="project-links mr-lg-1">
-                  <i class="fa-brands fa-github"></i>
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <a href="https://github.com/goyangrui/trading-journal">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="https://trading-journal-service.onrender.com/">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
                 </div>
               </div>
             </li>
@@ -166,8 +176,9 @@
                 </p>
                 <div class="project-skills"></div>
                 <div class="project-links ml-lg-1">
-                  <i class="fa-brands fa-github"></i>
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <a href="#">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
                 </div>
               </div>
             </li>
@@ -176,7 +187,7 @@
       </section>
 
       <!-- Contact page -->
-      <section class="section contact background-image">
+      <section id="contact-section" class="section contact background-image">
         <div class="container-xl">
           <h2 class="secondary-heading fw-bold fs-secondary-heading">
             Get In Touch
@@ -187,9 +198,15 @@
             interesting projects!
           </p>
           <div class="icon-container">
-            <i class="fa-brands fa-linkedin-in"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-envelope"></i>
+            <a href="https://www.linkedin.com/in/george-oyang/">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/goyangrui">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto: oyanggeorge@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
           </div>
         </div>
       </section>
