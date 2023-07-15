@@ -59,6 +59,9 @@
   --border-radius-2: 2rem;
   --border-radius-3: 1.25rem;
 
+  --box-shadow-1: 2px 2px 3px 1px var(--black);
+  --box-shadow-button: 3px 3px 1px;
+
   --navbar-height: 100px;
 
   --transition-1: 0.2s ease-in-out;
@@ -379,15 +382,16 @@ h6 {
   font-size: var(--fs-nav);
   color: var(--white);
   background-color: var(--primary-color-400);
-  height: 50px;
   padding: 8px 12px;
   border: none;
   border-radius: var(--border-radius-1);
   transition: var(--transition-1);
+  display: inline-block;
 }
 
 .button:hover {
-  background-color: var(--primary-color-650);
+  box-shadow: var(--box-shadow-button);
+  transform: translate(-3px, -3px);
 }
 
 .dropdown-button {
@@ -543,6 +547,7 @@ a:hover {
   padding: 8px 16px;
   border-radius: var(--border-radius-3);
   font-size: var(--fs-500);
+  box-shadow: var(--box-shadow-1);
 }
 
 @media (max-width: 576px) {
