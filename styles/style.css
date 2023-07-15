@@ -309,10 +309,12 @@ h6 {
 }
 
 .about {
+  background-color: var(--primary-color-400);
   background-image: url("../images/layered-waves-haikei.svg");
 }
 
 .projects {
+  background-color: var(--primary-color-400);
   background-image: url("../images/layered-waves-haikei-reverse.svg");
 }
 
@@ -523,25 +525,49 @@ h6 {
     font-size: var(--fs-700);
   }
 }
-a:hover {
-  color: var(--gray-200);
-}
+
 @media (max-width: 576px) {
   .icon-container a {
     font-size: var(--fs-600);
   }
 }
 
-.even-columns {
-  display: grid;
-  gap: 5rem;
-  grid-template-columns: 1fr 1fr;
+#about-section .secondary-heading {
+  margin-bottom: 70px;
 }
 
-@media (max-width: 992px) {
-  .even-columns {
-    grid-template-columns: 1fr;
+.about-subsections > div {
+  padding-top: 1rem;
+}
+
+@media (min-width: 993px) {
+  .about-subsections > div {
+    margin-bottom: 4rem;
   }
+}
+
+.text-body p {
+  margin: 1rem 0;
+}
+
+.text-body a {
+  display: inline-block;
+  position: relative;
+}
+
+.text-body a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--white);
+  width: 0;
+  height: 2px;
+  transition: var(--transition-1);
+}
+
+.text-body a:hover::after {
+  width: 100%;
 }
 
 .skills-container {
@@ -555,7 +581,7 @@ a:hover {
   padding: 8px 16px;
   border-radius: var(--border-radius-3);
   font-size: var(--fs-500);
-  box-shadow: var(--box-shadow-1);
+  box-shadow: var(--box-shadow-2);
 }
 
 @media (max-width: 576px) {
@@ -659,6 +685,28 @@ a:hover {
   box-shadow: var(--box-shadow-2);
 }
 
+.project-skills-right {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-skills-left {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-skill {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+}
+
 .project-links a {
   color: var(--white);
   text-decoration: none;
@@ -715,6 +763,11 @@ a:hover {
     box-shadow: none;
   }
 
+  .project-skills-right,
+  .project-skills-left {
+    justify-content: flex-start;
+  }
+
   .project-links a {
     font-size: var(--fs-650);
   }
@@ -733,6 +786,10 @@ a:hover {
 @media (max-width: 576px) {
   .project-list-item {
     margin-bottom: 3rem;
+  }
+
+  .project-skill {
+    font-size: var(--fs-200);
   }
 
   .project-links a {
@@ -758,4 +815,12 @@ body {
 ul {
   padding: 0;
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
 }
