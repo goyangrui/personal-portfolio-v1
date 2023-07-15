@@ -13,8 +13,11 @@
   --white: #fff;
   --black: #000;
 
-  --gray-1: #20293b;
-  --gray-2: #99a0a6;
+  --gray-200: #797f89;
+  --gray-250: #636976;
+  --gray-300: #4d5462;
+  --gray-350: #363e4f;
+  --gray-400: #20293b;
 
   --ff-primary: "AnkaCoderRegular", sans-serif;
   --ff-heading: var(--ff-primary);
@@ -60,6 +63,7 @@
   --border-radius-3: 1.25rem;
 
   --box-shadow-1: 2px 2px 3px 1px var(--black);
+  --box-shadow-2: 0 0 3px 2px var(--gray-300);
   --box-shadow-button: 3px 3px 1px;
 
   --navbar-height: 100px;
@@ -191,7 +195,7 @@ h6 {
 }
 
 .text-gray-2 {
-  color: var(--gray-2);
+  color: var(--gray-200);
 }
 
 .ff-heading {
@@ -313,7 +317,7 @@ h6 {
 }
 
 .contact {
-  background-image: url("../images/wave-haikei.svg");
+  background-color: var(--primary-color-400);
 }
 
 .primary-footer {
@@ -360,18 +364,21 @@ h6 {
 }
 
 .nav-link:hover {
-  color: var(--gray-2);
+  color: var(--gray-200);
 }
 
 .dropdown-menu {
   background-color: var(--black);
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
   top: var(--navbar-height);
   width: 100%;
-  padding-bottom: 1rem;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: var(--transition-1);
 }
 
 .dropdown-menu li {
@@ -424,7 +431,8 @@ h6 {
   }
 
   .dropdown-menu.open {
-    display: flex;
+    height: 200px;
+    padding-bottom: 1rem;
   }
 }
 
@@ -507,7 +515,7 @@ h6 {
 }
 
 .icon-container a:hover {
-  color: var(--gray-2);
+  color: var(--gray-200);
 }
 
 @media (max-width: 992px) {
@@ -516,7 +524,7 @@ h6 {
   }
 }
 a:hover {
-  color: var(--gray-2);
+  color: var(--gray-200);
 }
 @media (max-width: 576px) {
   .icon-container a {
@@ -543,7 +551,7 @@ a:hover {
 }
 
 .skill {
-  background-color: var(--gray-1);
+  background-color: var(--gray-400);
   padding: 8px 16px;
   border-radius: var(--border-radius-3);
   font-size: var(--fs-500);
@@ -624,10 +632,11 @@ a:hover {
 
 .project-details-right {
   text-align: right;
-  background-color: var(--gray-1);
+  background-color: var(--gray-400);
   padding: 1.25rem;
   border-radius: var(--border-radius-2);
   margin-bottom: 1rem;
+  box-shadow: var(--box-shadow-2);
 }
 
 .project-description-left {
@@ -643,10 +652,11 @@ a:hover {
 
 .project-details-left {
   text-align: left;
-  background-color: var(--gray-1);
+  background-color: var(--gray-400);
   padding: 1.25rem;
   border-radius: var(--border-radius-2);
   margin-bottom: 1rem;
+  box-shadow: var(--box-shadow-2);
 }
 
 .project-links a {
@@ -657,7 +667,7 @@ a:hover {
 }
 
 .project-links a:hover {
-  color: var(--gray-2);
+  color: var(--gray-200);
 }
 
 @media (max-width: 1080px) {
@@ -686,6 +696,7 @@ a:hover {
 
   .project-image {
     display: block;
+    box-shadow: var(--box-shadow-2);
   }
 
   .project-description-right,
@@ -701,6 +712,7 @@ a:hover {
     text-align: left;
     background-color: transparent;
     padding: 0;
+    box-shadow: none;
   }
 
   .project-links a {
